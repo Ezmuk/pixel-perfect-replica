@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Mail, Phone, MapPin, MessageCircle, ChevronRight } from "lucide-react";
-import logo from "@/assets/apa-logo.png.asset.json";
+import logo from "@/assets/apa-logo.png";
 import { NAV, SITE } from "@/lib/site";
 
 export function SiteHeader() {
@@ -10,7 +10,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="container-apa flex h-18 items-center justify-between gap-6 py-3">
         <Link to="/" aria-label="APA — Accueil" className="shrink-0">
-          <img src={logo.url} alt="Logo APA — Académie Professionnelle d'Afrique" width={891} height={493} className="h-12 w-auto" />
+          <img src={logo} alt="Logo APA — Académie Professionnelle d'Afrique" width={627} height={376} className="h-12 w-auto" />
         </Link>
         <nav aria-label="Navigation principale" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -51,7 +51,7 @@ export function SiteFooter() {
     <footer className="bg-primary-deep text-primary-foreground">
       <div className="container-apa grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-block rounded-lg bg-background p-3"><img src={logo.url} alt="Logo APA" width={891} height={493} loading="lazy" className="h-14 w-auto" /></div>
+          <div className="inline-block rounded-lg bg-background p-3"><img src={logo} alt="Logo APA" width={627} height={376} loading="lazy" className="h-14 w-auto" /></div>
           <p className="mt-4 max-w-sm text-primary-foreground/75">Transformer le potentiel humain en expertise concrète — formation professionnelle et appui-conseil à Goma, RDC, depuis 2015.</p>
         </div>
         <div>
