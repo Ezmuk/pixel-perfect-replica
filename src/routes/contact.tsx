@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, Phone, MapPin, MessageCircle, AlertTriangle } from "lucide-react";
 import { pageMeta, SITE } from "@/lib/site";
 import { PageHeader } from "@/components/site/Layout";
@@ -33,6 +33,22 @@ function Contact() {
           <MapPin className="size-6 text-brand-orange" />
           <h2 className="mt-4 text-lg font-semibold">Adresse</h2>
           <p>{SITE.addresses.contact}</p>
+        </div>
+      </section>
+      <section className="container-apa pb-16">
+        <h2 className="text-2xl font-bold">Déposer une demande</h2>
+        <p className="mt-2 text-muted-foreground">Choisissez le formulaire adapté à votre besoin.</p>
+        <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          {[
+            { to: "/inscription" as const, title: "Candidature formation", text: "S'inscrire à un programme." },
+            { to: "/devis" as const, title: "Demande de devis", text: "Un accompagnement pour votre organisation." },
+            { to: "/accompagnement" as const, title: "Appui aux femmes", text: "Mentorat, leadership ou structuration de projet." },
+          ].map((f) => (
+            <Link key={f.to} to={f.to} className="card-apa p-5 transition-colors hover:border-primary">
+              <h3 className="font-semibold">{f.title}</h3>
+              <p className="mt-1 text-sm text-muted-foreground">{f.text}</p>
+            </Link>
+          ))}
         </div>
       </section>
       <section className="container-apa pb-16">

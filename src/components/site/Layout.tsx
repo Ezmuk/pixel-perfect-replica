@@ -23,7 +23,7 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <Link to="/formations" className="btn btn-orange hidden lg:inline-flex">S'inscrire</Link>
+        <Link to="/inscription" className="btn btn-orange hidden lg:inline-flex">S'inscrire</Link>
         <button type="button" className="rounded-md p-2 lg:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
@@ -38,7 +38,7 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2"><Link to="/formations" onClick={() => setOpen(false)} className="btn btn-orange w-full">S'inscrire à une formation</Link></li>
+            <li className="pt-2"><Link to="/inscription" onClick={() => setOpen(false)} className="btn btn-orange w-full">S'inscrire à une formation</Link></li>
           </ul>
         </nav>
       )}

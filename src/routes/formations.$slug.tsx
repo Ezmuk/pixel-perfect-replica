@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { categoryTitle, getFormation } from "@/lib/formations";
-import { pageMeta, SITE } from "@/lib/site";
+import { pageMeta } from "@/lib/site";
 import { PageHeader } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/formations/$slug")({
@@ -49,7 +49,7 @@ function FormationPage() {
               </div>
             ))}
           </dl>
-          <a href={`mailto:${SITE.emails[0]}?subject=${encodeURIComponent("Inscription : " + f.title)}`} className="btn btn-orange mt-6 w-full">Demander une inscription</a>
+          <Link to="/inscription" search={{ formation: f.slug }} className="btn btn-orange mt-6 w-full">Demander une inscription</Link>
           <Link to="/contact" className="btn btn-outline mt-3 w-full">Poser une question</Link>
         </aside>
       </div>

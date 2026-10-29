@@ -114,7 +114,7 @@ function Index() {
             <SectionTitle eyebrow="Contact" title="Parlons de votre projet">Une formation, un accompagnement ou une offre pour votre organisation : notre équipe vous répond.</SectionTitle>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link to="/contact" className="btn btn-orange">Nous contacter</Link>
-              <Link to="/services" className="btn btn-outline">Demander un devis</Link>
+              <Link to="/devis" className="btn btn-outline">Demander un devis</Link>
             </div>
           </div>
           <dl className="space-y-4 self-center">

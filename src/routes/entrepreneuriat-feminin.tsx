@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Users, Award, Wrench } from "lucide-react";
 import femmes from "@/assets/femmes-entrepreneures.jpg";
-import { pageMeta, SITE } from "@/lib/site";
+import { pageMeta } from "@/lib/site";
 import { CtaBand, PageHeader } from "@/components/site/Layout";
 
 export const Route = createFileRoute("/entrepreneuriat-feminin")({
@@ -36,7 +36,7 @@ function Women() {
           <blockquote className="mt-10 border-l-4 border-brand-orange pl-5 text-lg font-medium text-primary-deep">
             Notre objectif : transformer chaque initiative portée par une femme en une entreprise structurée, résiliente et génératrice d'emplois.
           </blockquote>
-          <a href={`mailto:${SITE.emails[0]}?subject=${encodeURIComponent("Demande d'accompagnement — entrepreneuriat féminin")}`} className="btn btn-orange mt-8">Demander un accompagnement</a>
+          <Link to="/accompagnement" className="btn btn-orange mt-8">Demander un accompagnement</Link>
         </div>
         <img src={femmes} alt="Femme entrepreneure travaillant sur son plan d'affaires dans son atelier" width={1200} height={1200} loading="lazy" className="aspect-[4/5] w-full rounded-xl object-cover" />
       </section>

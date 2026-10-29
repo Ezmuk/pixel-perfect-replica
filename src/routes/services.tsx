@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { BarChart3, HeartPulse, Megaphone, Cpu } from "lucide-react";
-import { pageMeta, SITE } from "@/lib/site";
+import { pageMeta } from "@/lib/site";
 import { PageHeader } from "@/components/site/Layout";
 
 export const SERVICES = [
@@ -38,7 +38,7 @@ function Services() {
           <h2 className="text-2xl font-bold text-primary-foreground">Demander un devis</h2>
           <p className="mt-3 max-w-xl text-primary-foreground/80">Décrivez votre organisation et votre besoin : notre équipe revient vers vous avec une proposition adaptée.</p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a href={`mailto:${SITE.emails[0]}?subject=${encodeURIComponent("Demande de devis")}`} className="btn btn-orange">Écrire à l'équipe</a>
+            <Link to="/devis" className="btn btn-orange">Remplir le formulaire</Link>
             <Link to="/contact" className="btn btn-ghost-light">Toutes les coordonnées</Link>
           </div>
         </div>

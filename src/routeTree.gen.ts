@@ -11,8 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as AccompagnementRouteImport } from './routes/accompagnement'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DevisRouteImport } from './routes/devis'
 import { Route as EntrepreneuriatFemininRouteImport } from './routes/entrepreneuriat-feminin'
+import { Route as InscriptionRouteImport } from './routes/inscription'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -29,14 +32,29 @@ const AProposRoute = AProposRouteImport.update({
   path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AccompagnementRoute = AccompagnementRouteImport.update({
+  id: '/accompagnement',
+  path: '/accompagnement',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ContactRoute = ContactRouteImport.update({
   id: '/contact',
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DevisRoute = DevisRouteImport.update({
+  id: '/devis',
+  path: '/devis',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const EntrepreneuriatFemininRoute = EntrepreneuriatFemininRouteImport.update({
   id: '/entrepreneuriat-feminin',
   path: '/entrepreneuriat-feminin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InscriptionRoute = InscriptionRouteImport.update({
+  id: '/inscription',
+  path: '/inscription',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PolitiqueConfidentialiteRoute =
@@ -69,8 +87,11 @@ const FormationsSlugRoute = FormationsSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/accompagnement': typeof AccompagnementRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -80,8 +101,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/accompagnement': typeof AccompagnementRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -92,8 +116,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/accompagnement': typeof AccompagnementRoute
   '/contact': typeof ContactRoute
+  '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -105,8 +132,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/a-propos'
+    | '/accompagnement'
     | '/contact'
+    | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/inscription'
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
@@ -116,8 +146,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/a-propos'
+    | '/accompagnement'
     | '/contact'
+    | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/inscription'
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
@@ -127,8 +160,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/a-propos'
+    | '/accompagnement'
     | '/contact'
+    | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/inscription'
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
@@ -139,8 +175,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  AccompagnementRoute: typeof AccompagnementRoute
   ContactRoute: typeof ContactRoute
+  DevisRoute: typeof DevisRoute
   EntrepreneuriatFemininRoute: typeof EntrepreneuriatFemininRoute
+  InscriptionRoute: typeof InscriptionRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -164,6 +203,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/accompagnement': {
+      id: '/accompagnement'
+      path: '/accompagnement'
+      fullPath: '/accompagnement'
+      preLoaderRoute: typeof AccompagnementRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/contact': {
       id: '/contact'
       path: '/contact'
@@ -171,11 +217,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/devis': {
+      id: '/devis'
+      path: '/devis'
+      fullPath: '/devis'
+      preLoaderRoute: typeof DevisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/entrepreneuriat-feminin': {
       id: '/entrepreneuriat-feminin'
       path: '/entrepreneuriat-feminin'
       fullPath: '/entrepreneuriat-feminin'
       preLoaderRoute: typeof EntrepreneuriatFemininRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inscription': {
+      id: '/inscription'
+      path: '/inscription'
+      fullPath: '/inscription'
+      preLoaderRoute: typeof InscriptionRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/politique-confidentialite': {
@@ -219,8 +279,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  AccompagnementRoute: AccompagnementRoute,
   ContactRoute: ContactRoute,
+  DevisRoute: DevisRoute,
   EntrepreneuriatFemininRoute: EntrepreneuriatFemininRoute,
+  InscriptionRoute: InscriptionRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
