@@ -14,7 +14,7 @@ export const SITE = {
       "Quartier Kyeshero, Avenue Kanyambongo, Rez-de-chaussée de l'Église La Borne, Goma, RDC",
     intro: "À l'étage du bâtiment après la Sampietia / Cathédrale, Goma, RDC",
   },
-};
+} as const;
 
 export const NAV = [
   { to: "/", label: "Accueil" },
