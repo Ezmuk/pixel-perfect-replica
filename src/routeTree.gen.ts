@@ -19,6 +19,9 @@ import { Route as InscriptionRouteImport } from './routes/inscription'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as AdminBlogRouteImport } from './routes/admin.blog'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 import { Route as FormationsIndexRouteImport } from './routes/formations.index'
 import { Route as FormationsSlugRouteImport } from './routes/formations.$slug'
 
@@ -73,6 +76,21 @@ const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AdminBlogRoute = AdminBlogRouteImport.update({
+  id: '/admin/blog',
+  path: '/admin/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FormationsIndexRoute = FormationsIndexRouteImport.update({
   id: '/formations/',
   path: '/formations/',
@@ -95,7 +113,10 @@ export interface FileRoutesByFullPath {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/formations/$slug': typeof FormationsSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/formations/': typeof FormationsIndexRoute
 }
 export interface FileRoutesByTo {
@@ -109,7 +130,10 @@ export interface FileRoutesByTo {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/formations/$slug': typeof FormationsSlugRoute
+  '/blog': typeof BlogIndexRoute
   '/formations': typeof FormationsIndexRoute
 }
 export interface FileRoutesById {
@@ -124,7 +148,10 @@ export interface FileRoutesById {
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/admin/blog': typeof AdminBlogRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/formations/$slug': typeof FormationsSlugRoute
+  '/blog/': typeof BlogIndexRoute
   '/formations/': typeof FormationsIndexRoute
 }
 export interface FileRouteTypes {
@@ -140,7 +167,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
+    | '/admin/blog'
+    | '/blog/$slug'
     | '/formations/$slug'
+    | '/blog/'
     | '/formations/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -154,7 +184,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
+    | '/admin/blog'
+    | '/blog/$slug'
     | '/formations/$slug'
+    | '/blog'
     | '/formations'
   id:
     | '__root__'
@@ -168,7 +201,10 @@ export interface FileRouteTypes {
     | '/politique-confidentialite'
     | '/services'
     | '/sitemap.xml'
+    | '/admin/blog'
+    | '/blog/$slug'
     | '/formations/$slug'
+    | '/blog/'
     | '/formations/'
   fileRoutesById: FileRoutesById
 }
@@ -183,7 +219,10 @@ export interface RootRouteChildren {
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  AdminBlogRoute: typeof AdminBlogRoute
+  BlogSlugRoute: typeof BlogSlugRoute
   FormationsSlugRoute: typeof FormationsSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
   FormationsIndexRoute: typeof FormationsIndexRoute
 }
 
@@ -259,6 +298,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/admin/blog': {
+      id: '/admin/blog'
+      path: '/admin/blog'
+      fullPath: '/admin/blog'
+      preLoaderRoute: typeof AdminBlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/formations/': {
       id: '/formations/'
       path: '/formations'
@@ -287,7 +347,10 @@ const rootRouteChildren: RootRouteChildren = {
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  AdminBlogRoute: AdminBlogRoute,
+  BlogSlugRoute: BlogSlugRoute,
   FormationsSlugRoute: FormationsSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
   FormationsIndexRoute: FormationsIndexRoute,
 }
 export const routeTree = rootRouteImport
