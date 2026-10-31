@@ -24,6 +24,7 @@ export const NAV = [
   { to: "/entrepreneuriat-feminin", label: "Entrepreneuriat féminin" },
   { to: "/contact", label: "Contact" },
   { to: "/blog", label: "Journal" },
+  { to: "/gallery", label: "Galerie" },
 ] as const;
 
 export function pageMeta(title: string, description: string, path: string) {

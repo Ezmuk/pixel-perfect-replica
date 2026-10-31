@@ -15,6 +15,7 @@ import { Route as AccompagnementRouteImport } from './routes/accompagnement'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as DevisRouteImport } from './routes/devis'
 import { Route as EntrepreneuriatFemininRouteImport } from './routes/entrepreneuriat-feminin'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as InscriptionRouteImport } from './routes/inscription'
 import { Route as PolitiqueConfidentialiteRouteImport } from './routes/politique-confidentialite'
 import { Route as ServicesRouteImport } from './routes/services'
@@ -53,6 +54,11 @@ const DevisRoute = DevisRouteImport.update({
 const EntrepreneuriatFemininRoute = EntrepreneuriatFemininRouteImport.update({
   id: '/entrepreneuriat-feminin',
   path: '/entrepreneuriat-feminin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
   getParentRoute: () => rootRouteImport,
 } as any)
 const InscriptionRoute = InscriptionRouteImport.update({
@@ -109,6 +115,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/gallery': typeof GalleryRoute
   '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
@@ -126,6 +133,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/gallery': typeof GalleryRoute
   '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
@@ -144,6 +152,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/devis': typeof DevisRoute
   '/entrepreneuriat-feminin': typeof EntrepreneuriatFemininRoute
+  '/gallery': typeof GalleryRoute
   '/inscription': typeof InscriptionRoute
   '/politique-confidentialite': typeof PolitiqueConfidentialiteRoute
   '/services': typeof ServicesRoute
@@ -163,6 +172,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/gallery'
     | '/inscription'
     | '/politique-confidentialite'
     | '/services'
@@ -180,6 +190,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/gallery'
     | '/inscription'
     | '/politique-confidentialite'
     | '/services'
@@ -197,6 +208,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/devis'
     | '/entrepreneuriat-feminin'
+    | '/gallery'
     | '/inscription'
     | '/politique-confidentialite'
     | '/services'
@@ -215,6 +227,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DevisRoute: typeof DevisRoute
   EntrepreneuriatFemininRoute: typeof EntrepreneuriatFemininRoute
+  GalleryRoute: typeof GalleryRoute
   InscriptionRoute: typeof InscriptionRoute
   PolitiqueConfidentialiteRoute: typeof PolitiqueConfidentialiteRoute
   ServicesRoute: typeof ServicesRoute
@@ -268,6 +281,13 @@ declare module '@tanstack/react-router' {
       path: '/entrepreneuriat-feminin'
       fullPath: '/entrepreneuriat-feminin'
       preLoaderRoute: typeof EntrepreneuriatFemininRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/inscription': {
@@ -343,6 +363,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DevisRoute: DevisRoute,
   EntrepreneuriatFemininRoute: EntrepreneuriatFemininRoute,
+  GalleryRoute: GalleryRoute,
   InscriptionRoute: InscriptionRoute,
   PolitiqueConfidentialiteRoute: PolitiqueConfidentialiteRoute,
   ServicesRoute: ServicesRoute,
