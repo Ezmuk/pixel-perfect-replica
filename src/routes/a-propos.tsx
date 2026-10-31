@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import hero from "@/assets/hero-formation.jpg";
+import training from "@/assets/apa-training.jpg";
 import { pageMeta } from "@/lib/site";
 import { CtaBand, PageHeader, SectionTitle } from "@/components/site/Layout";
 
@@ -29,7 +29,7 @@ function About() {
           <p>Fondée en <strong>2015</strong> par la <strong>Fondation Africa Telema</strong> à Kinshasa, l'APA a progressivement déployé son expertise sur l'ensemble de la République Démocratique du Congo.</p>
           <p>Aujourd'hui solidement ancrée à <strong>Goma</strong>, au cœur de la région des Grands Lacs, l'académie combine une approche multidisciplinaire et pragmatique pour répondre aux défis réels du marché de l'emploi et du développement.</p>
         </div>
-        <img src={hero} alt="Session de formation à l'APA" width={1600} height={1072} loading="lazy" className="w-full rounded-xl object-cover" />
+        <img src={training} alt="Un formateur accompagne des apprenants pendant une séance de travail sur ordinateur" width={1600} height={1067} loading="lazy" className="w-full rounded-xl object-cover" />
       </section>
       <section className="bg-secondary py-16 md:py-20">
         <div className="container-apa grid gap-6 md:grid-cols-2">

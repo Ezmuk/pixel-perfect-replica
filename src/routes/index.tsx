@@ -1,10 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Building2, GraduationCap, Languages, Database, Wrench, Rocket, Check } from "lucide-react";
-import hero from "@/assets/hero-formation.jpg";
+import hero from "@/assets/apa-home-hero.jpg";
 import femmes from "@/assets/femmes-entrepreneures.jpg";
 import { CATEGORIES } from "@/lib/formations";
 import { pageMeta, SITE } from "@/lib/site";
 import { SectionTitle } from "@/components/site/Layout";
+import { BlogCard } from "@/components/blog/BlogCard";
+import { posts } from "@/lib/blog";
 import { VALUES } from "./a-propos";
 
 export const Route = createFileRoute("/")({
@@ -18,12 +20,16 @@ export const Route = createFileRoute("/")({
 });
 
 const catIcons = { langues: Languages, data: Database, metiers: Wrench, entrepreneuriat: Rocket } as const;
+const recentPosts = [...posts]
+  .filter((post) => post.status !== "draft")
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 3);
 
 function Index() {
   return (
     <>
       <section className="relative isolate overflow-hidden">
-        <img src={hero} alt="Apprenants en formation informatique avec un formateur à Goma" width={1600} height={1072} className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <img src={hero} alt="Un formateur accompagne des apprenants pendant une séance de travail sur ordinateur" width={1920} height={1280} className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="hero-overlay absolute inset-0 -z-10" />
         <div className="container-apa py-24 md:py-36">
           <div className="fade-up max-w-2xl">
@@ -73,6 +79,20 @@ function Index() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="container-apa py-20">
+        <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+          <SectionTitle eyebrow="Le journal APA" title="Nos articles récents">
+            Des conseils et des idées pour apprendre, entreprendre et faire avancer votre parcours.
+          </SectionTitle>
+          <Link to="/blog" className="inline-flex shrink-0 items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
+            Tous les articles <ArrowRight className="size-4" />
+          </Link>
+        </div>
+        <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {recentPosts.map((post) => <BlogCard key={post.slug} post={post} />)}
         </div>
       </section>
 
