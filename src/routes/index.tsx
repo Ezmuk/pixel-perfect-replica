@@ -12,8 +12,8 @@ import { VALUES } from "./a-propos";
 export const Route = createFileRoute("/")({
   head: () =>
     pageMeta(
-      "APA Goma — Formation professionnelle et appui-conseil en RDC",
-      "L'Académie Professionnelle d'Afrique forme les jeunes, les femmes et les professionnels à Goma et accompagne ONG, entreprises et institutions.",
+      "Africa Telema Goma — Formation professionnelle et appui-conseil en RDC",
+      "L'Fondation Africa Telema forme les jeunes, les femmes et les professionnels à Goma et accompagne ONG, entreprises et institutions.",
       "/",
     ),
   component: Index,
@@ -33,7 +33,7 @@ function Index() {
         <div className="hero-overlay absolute inset-0 -z-10" />
         <div className="container-apa py-24 md:py-36">
           <div className="fade-up max-w-2xl">
-            <p className="eyebrow text-brand-orange">Académie Professionnelle d'Afrique · Goma, RDC</p>
+            <p className="eyebrow text-brand-orange">Fondation Africa Telema · Goma, RDC</p>
             <h1 className="mt-5 text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">Transformez votre potentiel en expertise concrète.</h1>
             <p className="mt-6 text-lg text-primary-foreground/85 md:text-xl">Formation professionnelle, insertion et appui-conseil au cœur de la région des Grands Lacs, depuis 2015.</p>
             <div className="mt-9 flex flex-wrap gap-3">
@@ -84,7 +84,7 @@ function Index() {
 
       <section className="container-apa py-20">
         <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-          <SectionTitle eyebrow="Le journal APA" title="Nos articles récents">
+          <SectionTitle eyebrow="Le journal de la Fondation" title="Nos articles récents">
             Des conseils et des idées pour apprendre, entreprendre et faire avancer votre parcours.
           </SectionTitle>
           <Link to="/blog" className="inline-flex shrink-0 items-center gap-2 font-semibold text-primary hover:gap-3 transition-all">
@@ -115,7 +115,7 @@ function Index() {
             <p className="eyebrow text-brand-orange">Notre mission</p>
             <h2 className="mt-3 text-2xl font-bold text-primary-foreground md:text-4xl">Transformer le potentiel humain en expertise concrète.</h2>
             <p className="mt-5 text-primary-foreground/75">Nous fournissons un accompagnement pratique, académique et innovant pour bâtir une main-d'œuvre hautement compétitive et des entrepreneurs résilients.</p>
-            <Link to="/a-propos" className="btn btn-ghost-light mt-8">En savoir plus sur l'APA</Link>
+            <Link to="/a-propos" className="btn btn-ghost-light mt-8">En savoir plus sur la Fondation</Link>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
             {VALUES.map((v) => (

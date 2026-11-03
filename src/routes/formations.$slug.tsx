@@ -11,8 +11,8 @@ export const Route = createFileRoute("/formations/$slug")({
   },
   head: ({ loaderData }) =>
     loaderData
-      ? pageMeta(`${loaderData.title} — Formation à Goma | APA`, `${loaderData.summary} Formation proposée par l'Académie Professionnelle d'Afrique à Goma, RDC.`, `/formations/${loaderData.slug}`)
-      : { meta: [{ title: "Formation introuvable | APA" }, { name: "robots", content: "noindex" }] },
+      ? pageMeta(`${loaderData.title} — Formation à Goma | Africa Telema`, `${loaderData.summary} Formation proposée par la Fondation Africa Telema à Goma, RDC.`, `/formations/${loaderData.slug}`)
+      : { meta: [{ title: "Formation introuvable | Africa Telema" }, { name: "robots", content: "noindex" }] },
   notFoundComponent: () => (
     <div className="container-apa py-24 text-center">
       <h1 className="text-3xl font-bold">Formation introuvable</h1>

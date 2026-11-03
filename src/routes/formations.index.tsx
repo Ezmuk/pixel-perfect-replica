@@ -8,8 +8,8 @@ import { CtaBand, PageHeader } from "@/components/site/Layout";
 export const Route = createFileRoute("/formations/")({
   head: () =>
     pageMeta(
-      "Formations professionnelles à Goma — Langues, data, métiers | APA",
-      "Anglais professionnel, Excel avancé, SPSS, Stata, KoboCollect, menuiserie, plomberie, électricité et entrepreneuriat : les formations de l'APA à Goma.",
+      "Formations professionnelles à Goma — Langues, data, métiers | Africa Telema",
+      "Anglais professionnel, Excel avancé, SPSS, Stata, KoboCollect, menuiserie, plomberie, électricité et entrepreneuriat : les formations de la Fondation à Goma.",
       "/formations",
     ),
   component: Formations,
