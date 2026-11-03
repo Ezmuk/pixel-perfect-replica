@@ -7,7 +7,7 @@ export const Route = createFileRoute("/contact")({
   head: () =>
     pageMeta(
       "Contacter la Fondation à Goma — Téléphone, e-mail, adresse",
-      "Coordonnées de l'Fondation Africa Telema à Goma, RDC : téléphone, e-mail, WhatsApp et adresse.",
+      "Coordonnées de la Fondation Africa Telema à Goma, RDC : téléphone, e-mail, WhatsApp et adresse.",
       "/contact",
     ),
   component: Contact,

@@ -10,7 +10,7 @@ import { ConsentField, Field, RequestSuccess, fieldControlClass, textareaClass }
 
 export const Route = createFileRoute("/inscription")({
   validateSearch: (search: Record<string, unknown>) => ({
-    formation: typeof search.formation === "string" ? search.formation : undefined,
+    formation: typeof search["formation"] === "string" ? search["formation"] : undefined,
   }),
   head: () =>
     pageMeta(

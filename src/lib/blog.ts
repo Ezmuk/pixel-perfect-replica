@@ -7,7 +7,7 @@ export const categories: BlogCategory[] = [
   { slug: "competences", name: "Compétences professionnelles", description: "Les pratiques qui renforcent l'employabilité et la performance." },
   { slug: "entrepreneuriat", name: "Entrepreneuriat", description: "Des repères concrets pour entreprendre et faire grandir une activité." },
   { slug: "leadership", name: "Leadership", description: "Leadership responsable, inclusion et transformation locale." },
-  { slug: "vie-apa", name: "Vie de la Fondation", description: "Les nouvelles de l'Fondation Africa Telema." },
+  { slug: "vie-apa", name: "Vie de la Fondation", description: "Les nouvelles de la Fondation Africa Telema." },
 ];
 
 export const posts: BlogPost[] = [

@@ -13,8 +13,8 @@ export function Field({
 }: {
   label: string;
   htmlFor: string;
-  error?: string;
-  hint?: string;
+  error?: string | undefined;
+  hint?: string | undefined;
   children: ReactNode;
 }) {
   return (
@@ -47,7 +47,7 @@ export function ConsentField({
   id: string;
   checked: boolean;
   onChange: (v: boolean) => void;
-  error?: string;
+  error?: string | undefined;
 }) {
   return (
     <div className="space-y-2">

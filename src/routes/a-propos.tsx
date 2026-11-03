@@ -14,7 +14,7 @@ export const Route = createFileRoute("/a-propos")({
   head: () =>
     pageMeta(
       "À propos de la Fondation — Vision, mission et valeurs | Goma",
-      "Fondée en 2015 par la Fondation Africa Telema, l'Fondation Africa Telema est ancrée à Goma, au cœur de la région des Grands Lacs.",
+      "Fondée en 2015 par la Fondation Africa Telema, la Fondation Africa Telema est ancrée à Goma, au cœur de la région des Grands Lacs.",
       "/a-propos",
     ),
   component: About,
