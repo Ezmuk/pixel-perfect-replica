@@ -14,7 +14,7 @@ export const Route = createFileRoute("/a-propos")({
   head: () =>
     pageMeta(
       "À propos de la Fondation — Vision, mission et valeurs | Goma",
-      "Fondée en 2015 par la Fondation Africa Telema, la Fondation Africa Telema est ancrée à Goma, au cœur de la région des Grands Lacs.",
+      "Fondée en 2015, la Fondation Africa Telema est ancrée à Goma, au cœur de la région des Grands Lacs.",
       "/a-propos",
     ),
   component: About,
@@ -26,8 +26,8 @@ function About() {
       <PageHeader crumbs={[{ label: "À propos" }]} title="Qui sommes-nous ?" intro="Une institution panafricaine innovante, spécialisée dans le renforcement des capacités, la formation professionnelle et l'appui-conseil." />
       <section className="container-apa grid gap-12 py-16 md:grid-cols-2 md:py-20">
         <div className="space-y-5 text-lg leading-relaxed">
-          <p>Fondée en <strong>2015</strong> par la <strong>Fondation Africa Telema</strong> à Kinshasa, la Fondation a progressivement déployé son expertise sur l'ensemble de la République Démocratique du Congo.</p>
-          <p>Aujourd'hui solidement ancrée à <strong>Goma</strong>, au cœur de la région des Grands Lacs, l'académie combine une approche multidisciplinaire et pragmatique pour répondre aux défis réels du marché de l'emploi et du développement.</p>
+          <p>Fondée en <strong>2015</strong> à Kinshasa, la <strong>Fondation Africa Telema</strong> a progressivement déployé son expertise sur l'ensemble de la République Démocratique du Congo.</p>
+          <p>Aujourd'hui solidement ancrée à <strong>Goma</strong>, au cœur de la région des Grands Lacs, la Fondation combine une approche multidisciplinaire et pragmatique pour répondre aux défis réels du marché de l'emploi et du développement.</p>
         </div>
         <img src={training} alt="Un formateur accompagne des apprenants pendant une séance de travail sur ordinateur" width={1600} height={1067} loading="lazy" className="w-full rounded-xl object-cover" />
       </section>
