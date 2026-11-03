@@ -16,7 +16,7 @@ import { ConsentField, Field, RequestSuccess, fieldControlClass, textareaClass }
 export const Route = createFileRoute("/accompagnement")({
   head: () =>
     pageMeta(
-      "Demande d'appui — entrepreneuriat féminin | APA Goma",
+      "Demande d'appui — entrepreneuriat féminin | Africa Telema Goma",
       "Demandez un accompagnement en mentorat, leadership ou appui technique pour votre projet entrepreneurial.",
       "/accompagnement",
     ),
@@ -63,7 +63,7 @@ function AccompagnementPage() {
       <PageHeader
         crumbs={[{ label: "Entrepreneuriat féminin", to: "/entrepreneuriat-feminin" }, { label: "Accompagnement" }]}
         title="Demander un accompagnement"
-        intro="Ce formulaire s'adresse aux femmes entrepreneures et porteuses de projet. Décrivez votre initiative : l'APA vous recontacte."
+        intro="Ce formulaire s'adresse aux femmes entrepreneures et porteuses de projet. Décrivez votre initiative : la Fondation vous recontacte."
       />
       <section className="container-apa max-w-2xl py-16">
         <form

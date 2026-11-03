@@ -1,6 +1,6 @@
-// Catalogue derived from the APA profile. Practical details (durée, frais,
+// Catalogue derived from the Africa Telema profile. Practical details (durée, frais,
 // horaires, prérequis, modalité) are not in the profile, so they stay null
-// and render as "Information à confirmer" until APA provides them.
+// and render as "Information à confirmer" until Africa Telema provides them.
 export type Formation = {
   slug: string;
   title: string;

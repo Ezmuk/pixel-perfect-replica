@@ -60,7 +60,7 @@ export function ConsentField({
           className="mt-1 size-4 shrink-0 accent-primary"
         />
         <span>
-          J'accepte que l'APA utilise ces informations pour traiter ma demande, conformément à la{" "}
+          J'accepte que la Fondation utilise ces informations pour traiter ma demande, conformément à la{" "}
           <Link to="/politique-confidentialite" className="font-medium text-primary underline-offset-2 hover:underline">
             politique de confidentialité
           </Link>
@@ -90,7 +90,7 @@ export function RequestSuccess({
       <CheckCircle2 className="mx-auto size-12 text-success" aria-hidden />
       <h2 className="mt-4 text-2xl font-bold">{title}</h2>
       <p className="mt-3 text-muted-foreground">
-        Envoyez maintenant votre demande par e-mail ou WhatsApp. L'équipe APA vous répondra.
+        Envoyez maintenant votre demande par e-mail ou WhatsApp. L'équipe Africa Telema vous répondra.
       </p>
       <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
         <a href={mailtoHref(request)} className="btn btn-orange">

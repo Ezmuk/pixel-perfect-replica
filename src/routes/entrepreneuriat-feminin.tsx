@@ -7,8 +7,8 @@ import { CtaBand, PageHeader } from "@/components/site/Layout";
 export const Route = createFileRoute("/entrepreneuriat-feminin")({
   head: () =>
     pageMeta(
-      "Entrepreneuriat féminin à Goma — Mentorat et leadership | APA",
-      "Mentorat sur-mesure, formations en leadership et appui technique : l'APA accompagne les femmes entrepreneures de Goma et de la région des Grands Lacs.",
+      "Entrepreneuriat féminin à Goma — Mentorat et leadership | Africa Telema",
+      "Mentorat sur-mesure, formations en leadership et appui technique : la Fondation accompagne les femmes entrepreneures de Goma et de la région des Grands Lacs.",
       "/entrepreneuriat-feminin",
     ),
   component: Women,
@@ -17,7 +17,7 @@ export const Route = createFileRoute("/entrepreneuriat-feminin")({
 function Women() {
   return (
     <>
-      <PageHeader crumbs={[{ label: "Entrepreneuriat féminin" }]} title="L'autonomisation au féminin : notre priorité" intro="Parce que l'avenir économique de notre région passe par le leadership féminin, l'APA dédie un pôle stratégique à l'accompagnement des femmes entrepreneures." />
+      <PageHeader crumbs={[{ label: "Entrepreneuriat féminin" }]} title="L'autonomisation au féminin : notre priorité" intro="Parce que l'avenir économique de notre région passe par le leadership féminin, la Fondation dédie un pôle stratégique à l'accompagnement des femmes entrepreneures." />
       <section className="container-apa grid items-start gap-12 py-16 md:grid-cols-2">
         <div>
           <h2 className="text-2xl font-bold">Nous brisons les barrières d'accès aux opportunités</h2>

@@ -127,7 +127,7 @@ export function CtaBand() {
       <div className="container-apa flex flex-col items-start justify-between gap-6 py-12 md:flex-row md:items-center">
         <div>
           <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">Prêt à propulser votre carrière ou votre organisation ?</h2>
-          <p className="mt-2 text-primary-foreground/80">Contactez l'équipe APA à Goma pour en savoir plus.</p>
+          <p className="mt-2 text-primary-foreground/80">Contactez l'équipe Africa Telema à Goma pour en savoir plus.</p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Link to="/contact" className="btn btn-orange">Nous contacter</Link>

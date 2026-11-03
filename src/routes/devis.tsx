@@ -10,7 +10,7 @@ import { ConsentField, Field, RequestSuccess, fieldControlClass, textareaClass }
 export const Route = createFileRoute("/devis")({
   head: () =>
     pageMeta(
-      "Demander un devis — appui-conseil | APA Goma",
+      "Demander un devis — appui-conseil | Africa Telema Goma",
       "Demandez une proposition d'accompagnement : suivi-évaluation, santé publique, communication ou analyse de données.",
       "/devis",
     ),
