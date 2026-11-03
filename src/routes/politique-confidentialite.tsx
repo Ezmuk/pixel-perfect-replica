@@ -5,7 +5,7 @@ import { PageHeader } from "@/components/site/Layout";
 export const Route = createFileRoute("/politique-confidentialite")({
   head: () =>
     pageMeta(
-      "Politique de confidentialité | Africa Telema — Fondation Africa Telema",
+      "Politique de confidentialité | Fondation Africa Telema",
       "Comment l'Fondation Africa Telema collecte, utilise et protège vos données personnelles.",
       "/politique-confidentialite",
     ),
