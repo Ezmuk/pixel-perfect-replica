@@ -1,6 +1,6 @@
 export type BlogCategory = { slug: string; name: string; description: string };
 export type BlogPost = {
-  slug: string; title: string; excerpt: string; category: string; author: string; date: string; readTime: number; cover: string; alt: string; body: string[]; featured?: boolean; status?: "published" | "draft";
+  slug: string; title: string; excerpt: string; category: string; author: string; date: string; readTime: number; cover: string; alt: string; body: string[]; featured?: boolean; status?: "published" | "draft" | undefined;
 };
 
 export const categories: BlogCategory[] = [
