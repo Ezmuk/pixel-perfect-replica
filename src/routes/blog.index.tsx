@@ -10,7 +10,7 @@ export const Route = createFileRoute("/blog/")({ head: () => pageMeta("Journal d
 
 function BlogIndex() {
   const [query, setQuery] = useState(""); const [category, setCategory] = useState("all");
-  const featured = posts.find((post) => post.featured) ?? posts[0];
+  const featured = posts.find((post) => post.featured) ?? posts[0]!;
   const filtered = useMemo(() => posts.filter((post) => post.slug !== featured.slug && (category === "all" || post.category === category) && `${post.title} ${post.excerpt}`.toLowerCase().includes(query.toLowerCase())), [category, query, featured.slug]);
   return <>
     <PageHeader crumbs={[{ label: "Journal de la Fondation" }]} title="Le journal de la Fondation" intro="Des idées et des expériences pour apprendre, entreprendre et transformer son environnement." />
