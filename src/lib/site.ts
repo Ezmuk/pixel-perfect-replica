@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "APA — Académie Professionnelle d'Afrique",
-  shortName: "APA",
+  name: "Fondation Africa Telema",
+  shortName: "Africa Telema",
   url: "https://apa-goma.lovable.app",
   emails: ["info@fat.org", "krcmdrc@gmail.com"],
   phones: [

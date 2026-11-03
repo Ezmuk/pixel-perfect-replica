@@ -13,8 +13,8 @@ export const SERVICES = [
 export const Route = createFileRoute("/services")({
   head: () =>
     pageMeta(
-      "Conseil pour ONG, entreprises et institutions à Goma | APA",
-      "Suivi-évaluation, surveillance épidémiologique, communication institutionnelle et analyse de données : l'appui-conseil de l'APA pour les organisations en RDC.",
+      "Conseil pour ONG, entreprises et institutions à Goma | Africa Telema",
+      "Suivi-évaluation, surveillance épidémiologique, communication institutionnelle et analyse de données : l'appui-conseil de la Fondation pour les organisations en RDC.",
       "/services",
     ),
   component: Services,

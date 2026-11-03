@@ -80,7 +80,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "APA — Académie Professionnelle d'Afrique, Goma" },
+      { title: "Fondation Africa Telema — Goma" },
       { name: "description", content: "Formation professionnelle et appui-conseil à Goma, RDC." },
       { name: "theme-color", content: "#1f3f78" },
     ],
@@ -99,7 +99,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "@graph": [
             {
               "@type": "EducationalOrganization",
-              name: "Académie Professionnelle d'Afrique (APA)",
+              name: "Fondation Africa Telema",
               url: SITE.url,
               foundingDate: "2015",
               email: SITE.emails[0],

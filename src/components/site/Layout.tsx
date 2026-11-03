@@ -1,7 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Mail, Phone, MapPin, MessageCircle, ChevronRight } from "lucide-react";
-import logo from "@/assets/apa-logo.png";
+import logoAsset from "@/assets/telema-logo.jpg.asset.json";
+
+const logo = logoAsset.url;
 import { NAV, SITE } from "@/lib/site";
 
 export function SiteHeader() {
@@ -9,8 +11,8 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="container-apa flex h-18 items-center justify-between gap-6 py-3">
-        <Link to="/" aria-label="APA — Accueil" className="shrink-0">
-          <img src={logo} alt="Logo APA — Académie Professionnelle d'Afrique" width={627} height={376} className="h-12 w-auto" />
+        <Link to="/" aria-label="Fondation Africa Telema — Accueil" className="shrink-0">
+          <img src={logo} alt="Logo Fondation Africa Telema" width={845} height={453} className="h-12 w-auto" />
         </Link>
         <nav aria-label="Navigation principale" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -23,7 +25,7 @@ export function SiteHeader() {
             ))}
           </ul>
         </nav>
-        <Link to="/inscription" className="btn btn-orange hidden lg:inline-flex">S'inscrire</Link>
+        <Link to="/inscription" search={{ formation: undefined }} className="btn btn-orange hidden lg:inline-flex">S'inscrire</Link>
         <button type="button" className="rounded-md p-2 lg:hidden" aria-expanded={open} aria-controls="mobile-nav" aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
@@ -38,7 +40,7 @@ export function SiteHeader() {
                 </Link>
               </li>
             ))}
-            <li className="pt-2"><Link to="/inscription" onClick={() => setOpen(false)} className="btn btn-orange w-full">S'inscrire à une formation</Link></li>
+            <li className="pt-2"><Link to="/inscription" search={{ formation: undefined }} onClick={() => setOpen(false)} className="btn btn-orange w-full">S'inscrire à une formation</Link></li>
           </ul>
         </nav>
       )}
@@ -51,7 +53,7 @@ export function SiteFooter() {
     <footer className="bg-primary-deep text-primary-foreground">
       <div className="container-apa grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-block rounded-lg bg-background p-3"><img src={logo} alt="Logo APA" width={627} height={376} loading="lazy" className="h-14 w-auto" /></div>
+          <div className="inline-block rounded-lg bg-background p-3"><img src={logo} alt="Logo Fondation Africa Telema" width={845} height={453} loading="lazy" className="h-14 w-auto" /></div>
           <p className="mt-4 max-w-sm text-primary-foreground/75">Transformer le potentiel humain en expertise concrète — formation professionnelle et appui-conseil à Goma, RDC, depuis 2015.</p>
         </div>
         <div>
@@ -71,7 +73,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-primary-foreground/15">
-        <p className="container-apa py-5 text-sm text-primary-foreground/60">© {new Date().getFullYear()} Académie Professionnelle d'Afrique — Fondation Africa Telema.</p>
+        <p className="container-apa py-5 text-sm text-primary-foreground/60">© {new Date().getFullYear()} Fondation Africa Telema — Travail, Solidarité et Progrès.</p>
       </div>
     </footer>
   );
@@ -125,7 +127,7 @@ export function CtaBand() {
       <div className="container-apa flex flex-col items-start justify-between gap-6 py-12 md:flex-row md:items-center">
         <div>
           <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">Prêt à propulser votre carrière ou votre organisation ?</h2>
-          <p className="mt-2 text-primary-foreground/80">Contactez l'équipe APA à Goma pour en savoir plus.</p>
+          <p className="mt-2 text-primary-foreground/80">Contactez l'équipe Africa Telema à Goma pour en savoir plus.</p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Link to="/contact" className="btn btn-orange">Nous contacter</Link>

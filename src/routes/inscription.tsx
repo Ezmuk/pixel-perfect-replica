@@ -10,12 +10,12 @@ import { ConsentField, Field, RequestSuccess, fieldControlClass, textareaClass }
 
 export const Route = createFileRoute("/inscription")({
   validateSearch: (search: Record<string, unknown>) => ({
-    formation: typeof search.formation === "string" ? search.formation : undefined,
+    formation: typeof search["formation"] === "string" ? search["formation"] : undefined,
   }),
   head: () =>
     pageMeta(
-      "Candidature à une formation | APA Goma",
-      "Déposez votre demande d'inscription à une formation professionnelle de l'Académie Professionnelle d'Afrique à Goma.",
+      "Candidature à une formation | Africa Telema Goma",
+      "Déposez votre demande d'inscription à une formation professionnelle de l'Fondation Africa Telema à Goma.",
       "/inscription",
     ),
   component: InscriptionPage,
@@ -54,7 +54,7 @@ function InscriptionPage() {
       <PageHeader
         crumbs={[{ label: "Formations", to: "/formations" }, { label: "Candidature" }]}
         title="Candidature à une formation"
-        intro="Remplissez ce formulaire. Vous l'enverrez ensuite par e-mail ou WhatsApp à l'équipe APA."
+        intro="Remplissez ce formulaire. Vous l'enverrez ensuite par e-mail ou WhatsApp à l'équipe Africa Telema."
       />
       <section className="container-apa max-w-2xl py-16">
         <form

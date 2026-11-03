@@ -6,8 +6,8 @@ import { PageHeader } from "@/components/site/Layout";
 export const Route = createFileRoute("/contact")({
   head: () =>
     pageMeta(
-      "Contacter l'APA à Goma — Téléphone, e-mail, adresse",
-      "Coordonnées de l'Académie Professionnelle d'Afrique à Goma, RDC : téléphone, e-mail, WhatsApp et adresse.",
+      "Contacter la Fondation à Goma — Téléphone, e-mail, adresse",
+      "Coordonnées de la Fondation Africa Telema à Goma, RDC : téléphone, e-mail, WhatsApp et adresse.",
       "/contact",
     ),
   component: Contact,
@@ -54,7 +54,7 @@ function Contact() {
       <section className="container-apa pb-16">
         <div role="note" className="flex gap-3 rounded-lg border bg-warning p-5 text-warning-foreground">
           <AlertTriangle className="mt-0.5 size-5 shrink-0" />
-          <p className="text-sm"><strong>Adresse à confirmer avant publication :</strong> le profil APA mentionne aussi « {SITE.addresses.intro} ». Les deux adresses diffèrent ; merci de confirmer laquelle afficher.</p>
+          <p className="text-sm"><strong>Adresse à confirmer avant publication :</strong> le profil Africa Telema mentionne aussi « {SITE.addresses.intro} ». Les deux adresses diffèrent ; merci de confirmer laquelle afficher.</p>
         </div>
       </section>
     </>
