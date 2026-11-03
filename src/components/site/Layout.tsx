@@ -1,9 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState, type ReactNode } from "react";
 import { Menu, X, Mail, Phone, MapPin, MessageCircle, ChevronRight } from "lucide-react";
-import logoAsset from "@/assets/telema-logo.jpg.asset.json";
-
-const logo = logoAsset.url;
+import logo from "@/assets/Logo Africa Telema.jpg";
 import { NAV, SITE } from "@/lib/site";
 
 export function SiteHeader() {
