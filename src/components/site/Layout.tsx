@@ -12,7 +12,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b bg-background/95 backdrop-blur">
       <div className="container-apa flex h-18 items-center justify-between gap-6 py-3">
         <Link to="/" aria-label="Fondation Africa Telema — Accueil" className="shrink-0">
-          <img src={logo} alt="Logo Fondation Africa Telema" width={1280} height={1280} className="h-12 w-auto" />
+          <img src={logo} alt="Logo Fondation Africa Telema" width={845} height={453} className="h-12 w-auto" />
         </Link>
         <nav aria-label="Navigation principale" className="hidden lg:block">
           <ul className="flex items-center gap-1">
@@ -53,7 +53,7 @@ export function SiteFooter() {
     <footer className="bg-primary-deep text-primary-foreground">
       <div className="container-apa grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="inline-block rounded-lg bg-background p-3"><img src={logo} alt="Logo Fondation Africa Telema" width={1280} height={1280} loading="lazy" className="h-14 w-auto" /></div>
+          <div className="inline-block rounded-lg bg-background p-3"><img src={logo} alt="Logo Fondation Africa Telema" width={845} height={453} loading="lazy" className="h-14 w-auto" /></div>
           <p className="mt-4 max-w-sm text-primary-foreground/75">Transformer le potentiel humain en expertise concrète — formation professionnelle et appui-conseil à Goma, RDC, depuis 2015.</p>
         </div>
         <div>
