@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, Building2, GraduationCap, Languages, Database, Wrench, Rocket, Check } from "lucide-react";
+import { ArrowRight, Building2, GraduationCap, Languages, Database, Wrench, Rocket, Check, Handshake, Landmark, BriefcaseBusiness, UsersRound } from "lucide-react";
+import type { CSSProperties } from "react";
 import hero from "@/assets/apa-home-hero.jpg";
 import femmes from "@/assets/femmes-entrepreneures.jpg";
 import { CATEGORIES } from "@/lib/formations";
@@ -20,6 +21,13 @@ export const Route = createFileRoute("/")({
 });
 
 const catIcons = { langues: Languages, data: Database, metiers: Wrench, entrepreneuriat: Rocket } as const;
+const partners = [
+  { name: "Fondation Africa Telema", icon: Handshake },
+  { name: "ONG partenaire", icon: UsersRound },
+  { name: "Institution publique", icon: Landmark },
+  { name: "Entreprise locale", icon: BriefcaseBusiness },
+  { name: "Centre de formation", icon: GraduationCap },
+];
 const recentPosts = [...posts]
   .filter((post) => post.status !== "draft")
   .sort((a, b) => b.date.localeCompare(a.date))
@@ -40,6 +48,34 @@ function Index() {
               <Link to="/formations" className="btn btn-orange">Découvrir les formations <ArrowRight className="size-4" /></Link>
               <Link to="/services" className="btn btn-ghost-light">Solutions pour les organisations</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="partner-section overflow-hidden py-12 md:py-16" aria-labelledby="partners-title">
+        <div className="container-apa">
+          <div className="text-center">
+            <p className="eyebrow">Ensemble, plus loin</p>
+            <h2 id="partners-title" className="mt-2 text-2xl font-bold md:text-3xl">Nos partenaires</h2>
+            <p className="mt-3 text-muted-foreground">Des collaborations au service de la formation et de l’insertion.</p>
+          </div>
+        </div>
+        <div className="partner-marquee mt-8" role="region" aria-label="Carrousel de nos partenaires">
+          <div className="partner-track">
+            {[0, 1].map((set) => (
+              <div key={set} className="partner-group" aria-hidden={set === 1}>
+                {partners.map((partner, index) => (
+                  <div
+                    key={partner.name}
+                    className="partner-card"
+                    style={{ "--partner-delay": `${index * -0.55}s` } as CSSProperties}
+                  >
+                    <span className="partner-icon"><partner.icon className="size-6" aria-hidden="true" /></span>
+                    <span className="font-display text-sm font-semibold text-primary-deep md:text-base">{partner.name}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
           </div>
         </div>
       </section>
